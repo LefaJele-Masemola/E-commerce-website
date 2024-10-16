@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <script src="../Shopping cart/jquery.min.js"></script>
+    <script src="../Shopping cart/minislider.js"></script>
+    <title>Cart</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!-- Top Navbar -->
+        <div class="navbar-top">
+            <div>
+                <button id="menuButton"><i class="fas fa-bars"></i></button>
+                <!-- Logo -->
+                <a href= "../CNS/Icons/IMG_Logo.JPG" type="image/x-icon">
+                    <img src="../CNS/Icons/IMG_Logo.JPG" height="100" width="80" alt="Logo">
+                    <h2 class="logo">Your Logo</h2>
+                </a>
+            </div>
+            <div>
+                <!-- My Account -->
+                <div class="account">
+                    <a href="../index.html">
+                        <button class="account-btn">
+                            <i class="fas fa-user-alt"></i>
+                        </button>
+                        <span class="account-text">My Account</span>
+                    </a>
+                </div>
+                <!-- Shopping Cart -->
+                <div class="shopping-cart">
+                    <div class="sum-prices">
+                        <i class="fas fa-shopping-cart shoppingCartButton"></i>
+                        <h6 id="sum-prices">$0.00</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Navbar (Navigation Links) -->
+        <div class="navbar" id="navbar">
+            <div class="links">
+                <ul>
+                    <li class="nav-links">
+                        <a href="../index.html" class="link">Home</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="../About Propaganda.html" class="link">About</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="../Contact Us.html" class="link">Contact</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="../Get involved.html" class="link">Get Involved</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="../Our Work.html" class="link">Our Work</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="../Shopping cart/cart.html" class="link">Cart</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Search Bar -->
+            <div class="searchbar">
+                <form action="#">
+                    <input type="search" placeholder="Search for products">
+                    <i class="fa fa-search" id="search-icon"></i>
+                </form>
+            </div>
+        </div>
+        <!-- Shopping Cart Overlay -->
+        <div class="productsOnCart hide">
+            <div class="overlay"></div>
+            <div class="top">
+                <button id="closeButton">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+                <h3>Cart</h3>
+            </div>
+            <ul id="buyItems">
+                <h4 class="empty">Your shopping cart is empty</h4>
+                <!-- Example cart items -->
+                <!-- <li class="buyItem">
+                    <img src="Images/products-images/Mobiles/galaxynote10.png">
+                    <div>
+                        <h5>Product Name</h5>
+                        <h6>$199</h6>
+                        <div>
+                            <button>-</button>
+                            <span class="countOfProduct">1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+            <a href="../checkout/checkout.html" class="btn checkout">Checkout</a>
+        </div>
+    </nav>
+    
+    <main>
+        <!-- Product Section -->
+        <section class="main-section">
+            <div class="product-container">
+                <h3>Popular Laptops</h3>
+                <div class="products">
+                    <!-- Product 1 -->
+                    <div class="product">
+                        <div class="product-under">
+                            <figure class="product-image">
+                                <img src="../CNS/black and green hoodie - small.JPG" alt="Product Image">
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="1">
+                                        <i class="fas fa-cart-plus"></i>Add to Cart
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">More Info</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                                <h4 class="productName">Product 1</h4>
+                                <span class="stars"></span>
+                                <p>Description of the product.</p>
+                                <h6 class="price">$<span class="priceValue">999</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product">
+                        <div class="product-under">
+                            <figure class="product-image">
+                                <img src="../CNS/black and green hoodie - small.JPG" alt="Product Image">
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="2">
+                                        <i class="fas fa-cart-plus"></i>Add to Cart
+                                    </button>
+                                    <a href="../Photo Gallery.html" class="btn btn-small">More Info</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                                <h4 class="productName">Product 2</h4>
+                                <span class="stars"></span>
+                                <p>Description of the product.</p>
+                                <h6 class="price">$<span class="priceValue">599</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product">
+                        <div class="product-under">
+                            <figure class="product-image">
+                                <img src="../CNS/attitude - small.JPG" alt="Product Image">
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="3">
+                                        <i class="fas fa-cart-plus"></i>Add to Cart
+                                    </button>
+                                    <a href="../Photo Gallery.html" class="btn btn-small">More Info</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                                <h4 class="productName">Product 3</h4>
+                                <span class="stars"></span>
+                                <p>Description of the product.</p>
+                                <h6 class="price">$<span class="priceValue">650</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product">
+                        <div class="product-under">
+                            <figure class="product-image">
+                                <img src="../CNS/Tote bag - small.JPG" alt="Product Image">
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="4">
+                                        <i class="fas fa-cart-plus"></i>Add to Cart
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">More Info</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                                <h4 class="productName">Product 4</h4>
+                                <span class="stars"></span>
+                                <p>Description of the product.</p>
+                                <h6 class="price">$<span class="priceValue">899</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Popular Mobiles Section -->
+        <section class="main-section">
+            <div class="pop-mobiles">
+                <div class="pop-mobiles-1">
+                    <figure>
+                        <img src="../CNS/black and white bucket hats.JPG" alt="Product Image">
+                    </figure>
+                    <div>
+                        <h2>New iPhone</h2>
+                        <p>Description of the product.</p>
+                        <h4>$1099</h4>
+                        <a href="../Photo Gallery.html" class="btn">Buy Now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <h3>Popular Mobiles</h3>
+                <div class="pop-mobiles-2">
+                    <ul class="products">
+                        <!-- Product 5 -->
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img src="../CNS/black xoxo hoodie.jpg" alt="Product Image">
+                                    <div class="product-over">
+                                        <button class="btn btn-small addToCart" data-product-id="5">
+                                            <i class="fas fa-cart-plus"></i>Add to Cart
+                                        </button>
+                                        <a href="../Photo Gallery.html" class="btn btn-small">More Info</a>
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Product 5</h4>
+                                    <span class="stars"></span>
+                                    <p>Description of the product.</p>
+                                    <h6 class="price">$<span class="priceValue">799</span></h6>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Product 6 -->
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img src="../CNS/casual v-neck - small.JPG" alt="Product Image">
+                                    <div class="product-over">
+                                        <button class="btn btn-small addToCart" data-product-id="6">
+                                            <i class="fas fa-cart-plus"></i>Add to Cart
+                                        </button>
+                                        <a href="../Photo Gallery.html" class="btn btn-small">More Info</a>
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Product 6</h4>
+                                    <span class="stars"></span>
+                                    <p>Description of the product.</p>
+                                    <h6 class="price">$<span class="priceValue">349</span></h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Column 1 -->
+            <div class="footer-column-1">
+                <h4>News</h4>
+                <p>Stay updated with our latest news and announcements.</p>
+            </div>
+            <!-- Column 2 -->
+            <div class="footer-column-2">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Column 3 -->
+            <div class="footer-column-3">
+                <h4>About Us</h4>
+                <p>Learn more about our mission and vision.</p>
+            </div>
+        </div>
+        <!-- Payment Methods -->
+        <ul class="footer-last">
+            <li><i class="fab fa-cc-visa"></i></li>
+            <li><i class="fab fa-cc-mastercard"></i></li>
+            <li><i class="fab fa-cc-paypal"></i></li>
+        </ul>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../Shopping cart/script.js"></script>
+    <script src="../Shopping cart/Shopping cart.js"></script>
+</body>
+</html>

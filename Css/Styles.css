@@ -1,0 +1,231 @@
+/*
+    Created on : 23 Oct 2021, 2:26:33 PM
+    Author     : Lefa Jele-Masemola
+*/
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header slider container */
+#hearderSlide {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Style the slider content */
+.MS-content {
+    display: flex; /* Ensure the items are in a row */
+    transition: transform 0.5s ease; /* Smooth transition between slides */
+}
+
+.MS-content .item {
+    flex: 0 0 auto; /* Prevent items from stretching */
+    width: 100%; /* Ensure each item takes full width */
+}
+
+.MS-content .item img {
+    width: 100%; /* Ensure images take full width of their containers */
+}
+
+/* Hide navigation controls */
+.MS-controls {
+    display: none; /* Hide navigation controls */
+}
+
+/* Reset and basic styling */
+
+
+/* Navigation styles */
+nav {
+    width: 100%;
+    background: black;
+    overflow: auto;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.account-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.shopping-cart {
+    display: flex;
+    align-items: center;
+}
+
+.shopping-cart h6 {
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+}
+
+.shoppingCartButton {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 10px 15px;
+    transition: background-color 0.5s;
+}
+
+.nav-links a:hover {
+    background-color: purple;
+    text-transform: uppercase;
+}
+
+/* Banner styles */
+#Banner, .page_banner, #aboutus_banner, #contactus_banner, #getinvolved_banner, #ourwork_banner, #photogallery_banner {
+    height: 120px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 10px;
+}
+
+#homepage_banner p {
+    font-size: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-second {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-column-1, .footer-column-2, .footer-column-3 {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.footer-last {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-last li {
+    margin: 0 10px;
+}
+
+/* Form styles */
+.form_container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inputs {
+    flex: 0 0 calc(50% - 5px);
+    margin-bottom: 20px;
+}
+
+.inputs label {
+    display: block;
+    font-weight: bold;
+}
+
+.inputs input[type="text"],
+.inputs input[type="email"],
+.inputs input[type="tel"],
+.inputs textarea,
+.inputs select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.inputs textarea {
+    height: 100px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons button[type="reset"] {
+    background-color: #ccc;
+    margin-left: 10px;
+}
+
+/* Gallery styles */
+.gallery {
+    margin: 5px;
+}
+
+.gallery img {
+    transition: 0.5s;
+    padding: 15px;
+    width: 350px;
+}
+
+.gallery img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}

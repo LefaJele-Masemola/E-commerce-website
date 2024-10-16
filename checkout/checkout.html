@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="checkout">Checkout</h1>
+    
+    <!-- Order summary -->
+    <div id="order-summary">
+        <!-- Order details will be displayed here -->
+    </div>
+
+    <!-- Shipping information form -->
+    <form id="shipping-form">
+        <!-- Form fields for shipping information -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <!-- Add more fields for address, email, etc. -->
+
+        <!-- Payment method selection -->
+        <h2>Payment Method</h2>
+        <label><input type="radio" name="payment-method" value="credit-card" checked> Credit Card</label>
+        <!-- Add more payment method options if needed -->
+
+        <!-- Credit card information -->
+        <div id="credit-card-info">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+            <!-- Add more fields for expiration date, CVV, etc. -->
+        </div>
+
+        <button type="submit" id="checkout-button" class="hidden">Pay Now</button>
+    </form>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
